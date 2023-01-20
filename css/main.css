@@ -12,6 +12,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--theme-color);
     color: var(--text-color);
+    padding-top: 70px;
 }
 
 a {
