@@ -1,140 +1,139 @@
 .topheader {
-    position: fixed;
-    box-shadow: 0 4px 5px var(--navbar-shallow-color);
-    background-color: var(--theme-color);
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+  position: fixed;
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  background-color: var(--theme-color);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .topnav {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    max-width: 980px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /* Logo */
 
 .logo {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
 }
 
 .logo img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Menu */
 
 .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .menu a {
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 50px;
-    text-transform: uppercase;
-    position: relative;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .menu a::after {
-    content: "";
-    background-color: var(--secundary-color);
-    position: absolute;
-    left: 0;
-    top: calc(100% + 5px);
-    width: 100%;
-    height: 4px;
-    opacity: 0;
-    transition: opacity 0.3s;
+  content: "";
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .menu a.selected::after,
 .menu a:hover::after {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .menu a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .open-menu,
 .close-menu {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 950px) {
+  /* Menu */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--menu-mobile-background-color);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
 
-    /* Menu */
-    .menu {
-        flex-direction: column;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        background-color: var(--menu-mobile-background-color);
-        overflow-y: auto;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-    }
+  .menu li {
+    padding: 0;
+  }
 
-    .menu li {
-        padding: 0;
-    }
+  .menu a {
+    color: var(--text-color-inverse);
+    line-height: 70px;
+    font-size: 30px;
+  }
 
-    .menu a {
-        color: var(--text-color-inverse);
-        line-height: 70px;
-        font-size: 30px;
-    }
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 
-    .open-menu,
-    .close-menu {
-        display: block;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
+  .close-menu {
+    align-self: flex-end;
+    padding: 11px 14px;
+  }
 
-    .close-menu {
-        align-self: flex-end;
-        padding: 11px 14px;
-    }
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-    .menu_opened {
-        opacity: 1;
-        pointer-events: all;
-    }
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
 
-    .open-menu:focus:not(:focus-visible),
-    .close-menu:focus:not(:focus-visible) {
-        outline: none;
-    }
+  .menu a::after {
+    content: none;
+  }
 
-    .menu a::after {
-        content: none;
-    }
-
-    .menu a:hover,
-    .menu a.selected {
-        color: var(--secundary-color);
-    }
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--secondary-color);
+  }
 }

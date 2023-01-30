@@ -1,68 +1,69 @@
 :root {
-    --theme-color: white;
-    --primary-color: #124f88;
-    --secundary-color: #f7c331;
-    --text-color-inverse: white;
-    --text-color: black;
-    --navbar-shallow-color: #e5e5e5;
-    --menu-mobile-background-color: #3a4460;
+  --theme-color: white;
+  --primary-color: #124f88;
+  --secondary-color: #f7c331;
+  --text-color-inverse: white;
+  --text-color: black;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3a4460;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 section[id] {
-    scroll-margin-top: 70px;
-    /* observer */
-    border: 4px solid red;
-    /* observer */
+  scroll-margin-top: 70px;
+  /* observer */
+  border: 4px solid red;
+  /* observer */
 }
 
 /* observer */
 .observer-root-margin {
-    pointer-events: none;
-    z-index: 1000;
-    border: 4px solid blue;
+  pointer-events: none;
+  z-index: 1000;
+  border: 4px solid blue;
 
-    position: fixed;
-    top: 30%;
-    left: 0;
-    right: 0;
-    bottom: 70%;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  right: 0;
+  bottom: 70%;
 }
 /* observer */
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--theme-color);
-    color: var(--text-color);
-    padding-top: 70px;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--theme-color);
+  color: var(--text-color);
+  padding-top: 70px;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-color);
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .horizontal-padding {
-    padding-left: 25px;
-    padding-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .vertical-padding {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-@media(min-width: 950px) {
-    .horizontal-padding {
-        padding-left: 70px;
-        padding-right: 70px;
-    }
-    
-    .vertical-padding {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-};
+@media (min-width: 950px) {
+  .horizontal-padding {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .vertical-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+} ;

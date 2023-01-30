@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/profile.css" />
     <link rel="stylesheet" href="/css/skills.css" />
     <link rel="stylesheet" href="/css/experiences.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <script defer src="/js/app.js"></script>
 </head>
 
@@ -126,6 +127,45 @@
                     <p class="contact-text">Envie su mensaje y le respondere pronto</p>
                 </div>
             </div>
+            <form class="contact-form">
+                <div class="contact-form-group">
+                    <label for="name">Nombre</label>
+                    <input required type="text" name="name" id="name">
+                </div>
+                <div class="contact-form-group">
+                    <label for="email">Email</label>
+                    <input required type="email" name="name" id="email">
+                </div>
+                <div class="contact-form-group">
+                    <label for="messaje">Mensaje</label>
+                    <textarea required name="message" id="messaje" rows="6"></textarea>
+                </div>
+                <button type="submit" class="contact-form-submit">Enviar</button>
+            </form>
+            <nav class="social">
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="link twitter" class="social-link">
+                            <img src="/img/social/twitter.svg" alt="twitter profile">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="link github" class="social-link">
+                            <img src="/img/social/github.svg" alt="github profile">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="link linkedin" class="social-link">
+                            <img src="/img/social/linkedin.svg" alt="linkedin profile">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="link youtube" class="social-link">
+                            <img src="/img/social/youtube.svg" alt="youtube profile">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </section>
     </div>
 </body>
