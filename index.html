@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horus Chourio</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -31,7 +37,33 @@
                 </div>
             </a>
             <button class="open-menu" aria-label="Abrir menú">
-                <img src="/img/menu_icon.svg" alt="abrir menú" />
+                <svg 
+                width="29" 
+                height="29" 
+                viewBox="0 0 29 29" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                     d="M2 14.5H27" 
+                     stroke="currentColor" 
+                     stroke-width="3" 
+                     stroke-linecap="round" 
+                     stroke-linejoin="round"
+                     />
+                    <path 
+                    d="M2 2H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    />
+                    <path 
+                    d="M2 27H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                    </svg>
             </button>
             <ul class="menu">
                 <button class="close-menu" aria-label="Cerrar menú">
@@ -54,7 +86,7 @@
                     manejo de nuevas tecnologias y su aplicación para el avance
                     tecnológico en beneficio de la sociedad.
                 </p>
-                <button class="profile-btn">Descargar cv</button>
+                <a class="profile-btn" href="#" download>Descargar cv</a>
             </div>
             <span class="profile-img-section">
                 <img class="profile-img" src="/img/imgPerfil.png" alt="programador" />
@@ -64,7 +96,18 @@
     </div>
     
     <section class="experiences" id="experience">
-        <img src="/img/wave.svg" alt="división" class="wave"/>
+        <svg 
+        class="wave"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 1440 320">
+            <path 
+            fill="currentColor" 
+            fill-opacity="1" 
+            d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+
+        </path>
+        </svg>
         <div class="experiences-body">
             <h2 class="experiences-title">Experiencia</h2>
             <div class="experiences-grid">
@@ -94,19 +137,30 @@
                 </div>
             </div>
         </div>
-        <img src="/img/wave.svg" alt="división" class="wave wave_bottom"/>
+        <svg 
+        class="wave wave_bottom"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none" 
+        viewBox="0 0 1440 320">
+            <path 
+            fill="currentColor" 
+            fill-opacity="1" 
+            d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+
+        </path>
+        </svg>
     </section>
 
     <div class="horizontal-padding vertical-padding">
         <section class="skills" id="skills">
             <h2 class="skills-title">Habilidades</h2>
             <ul class="skills-list">
-                <li class="skills-skill">CSS</li>
                 <li class="skills-skill">HTML</li>
+                <li class="skills-skill">CSS</li>
+                <li class="skills-skill">JavaScript</li>
                 <li class="skills-skill">Node.js</li>
                 <li class="skills-skill">React.js</li>
                 <li class="skills-skill">TypeScript</li>
-                <li class="skills-skill">JavaScript</li>
             </ul>
         </section>
     </div>
@@ -127,7 +181,7 @@
                     <p class="contact-text">Envie su mensaje y le respondere pronto</p>
                 </div>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" name="contact" netlify>
                 <div class="contact-form-group">
                     <label for="name">Nombre</label>
                     <input required type="text" name="name" id="name">

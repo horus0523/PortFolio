@@ -1,6 +1,6 @@
 .topheader {
   position: fixed;
-  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  box-shadow: var(--navbar-shadow);
   background-color: var(--theme-color);
   left: 0;
   top: 0;
@@ -23,7 +23,7 @@
   align-items: center;
   font-size: 18px;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .logo img {
@@ -64,8 +64,8 @@
   transition: opacity 0.3s;
 }
 
-.menu a.selected::after,
-.menu a:hover::after {
+.menu a.selected::after/* ,
+.menu a:hover::after */ {
   opacity: 0.8;
 }
 
@@ -111,6 +111,7 @@
     border: none;
     background: none;
     cursor: pointer;
+    color: var(--text-color);
   }
 
   .close-menu {
