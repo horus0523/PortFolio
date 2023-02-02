@@ -16,6 +16,28 @@
   margin: 0 auto;
 }
 
+.dark-mode-btn, 
+.light-mode-btn {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+:root[data-theme="light"] .dark-mode-btn{
+  display: none;
+}
+
+:root[data-theme="dark"] .light-mode-btn{
+  display: none;
+}
+
 /* Logo */
 
 .logo {
@@ -24,6 +46,7 @@
   font-size: 18px;
   font-weight: 500;
   color: var(--accent-color);
+  margin-right: auto;
 }
 
 .logo img {

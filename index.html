@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,6 +12,32 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/img/favicon/site.webmanifest">
 
+    <script>
+        (function() {
+            const userTheme = localStorage.getItem("theme");
+        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        if (userTheme === "dark" ||(!userTheme && darkQuery.matches)) {
+            setTheme("dark");
+        };
+
+        darkQuery.addEventListener("change", function (e) {
+            if (!localStorage.getItem("theme"))
+            setTheme(e.matches ? "dark" : "light");
+        });
+
+        function setTheme(newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme);
+        }
+
+        window.__setUserTheme = function (newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        }
+        })()
+        
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -23,6 +49,7 @@
     <link rel="stylesheet" href="/css/experiences.css">
     <link rel="stylesheet" href="/css/contact.css">
     <script defer src="/js/app.js"></script>
+    <script defer src="/js/colorToggle.js"></script>
 </head>
 
 <body>
@@ -36,6 +63,24 @@
                     Desarrollador
                 </div>
             </a>
+            
+            <ul class="menu">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <img src="/img/close_icon.svg" alt="cerrar menú" />
+                </button>
+                <li><a href="#profile" class="selected">Perfil</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button class="dark-mode-btn" aria-label="Activar modo oscuro">
+                <img src="/img/sun.svg" alt="Modo oscuro" width="29" 
+                height="29">
+            </button>
+            <button class="light-mode-btn" aria-label="Activar modo claro">
+                <img src="/img/moon.svg" alt="Modo claro" width="29" 
+                height="29">
+            </button>
             <button class="open-menu" aria-label="Abrir menú">
                 <svg 
                 width="29" 
@@ -65,15 +110,6 @@
                     stroke-linejoin="round"/>
                     </svg>
             </button>
-            <ul class="menu">
-                <button class="close-menu" aria-label="Cerrar menú">
-                    <img src="/img/close_icon.svg" alt="cerrar menú" />
-                </button>
-                <li><a href="#profile" class="selected">Perfil</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
         </nav>
     </header>
 

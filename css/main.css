@@ -15,8 +15,8 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* @media (prefers-color-scheme: dark) { */
+  :root[data-theme="dark"] {
     --theme-color: #0f172a;
     --primary-color: #243043;
     --secondary-color: #9dc8db;
@@ -29,6 +29,10 @@
     --tag-shadow: 0 0 0 1px #ffffff;
     color-scheme: dark;
   }
+/* } */
+
+form {
+  color-scheme: light;
 }
 
 * {
