@@ -9,7 +9,7 @@ function toggleMenu() {
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 
-/* Permite que el menu hambuerguesa tenga funcionalidad y cierre el menu al seleccionar una opción */
+/* Permite que el menu hamburguesa tenga funcionalidad y cierre el menu al seleccionar una opción */
 
 const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
 

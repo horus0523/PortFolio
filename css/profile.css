@@ -56,6 +56,11 @@
   filter: brightness(130%);
 }
 
+.profile-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @media (min-width: 950px) {
   .profile-info {
     margin-bottom: 0px;
