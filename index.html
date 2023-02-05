@@ -1,273 +1,319 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horus Chourio</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
 
     <script>
-        (function() {
-            const userTheme = localStorage.getItem("theme");
+      (function () {
+        const userTheme = localStorage.getItem("theme");
         const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-        if (userTheme === "dark" ||(!userTheme && darkQuery.matches)) {
-            setTheme("dark");
-        };
+        if (userTheme === "dark" || (!userTheme && darkQuery.matches)) {
+          setTheme("dark");
+        }
 
         darkQuery.addEventListener("change", function (e) {
-            if (!localStorage.getItem("theme"))
+          if (!localStorage.getItem("theme"))
             setTheme(e.matches ? "dark" : "light");
         });
 
         function setTheme(newTheme) {
-            document.documentElement.setAttribute("data-theme", newTheme);
+          document.documentElement.setAttribute("data-theme", newTheme);
         }
 
         window.__setUserTheme = function (newTheme) {
-            document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
-        }
-        })()
-        
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+        };
+      })();
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/profile.css" />
     <link rel="stylesheet" href="/css/skills.css" />
-    <link rel="stylesheet" href="/css/experiences.css">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/experiences.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
     <script defer src="/js/app.js"></script>
     <script defer src="/js/colorToggle.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="observer-root-margin"></div>
     <header class="topheader">
-        <nav class="topnav">
-            <a href="#" class="logo">
-                <img height="50" width="50" src="/img/imgPerfil.png" alt="desarrollador" />
-                <div>
-                    Horus Chourio <br />
-                    Desarrollador
-                </div>
-            </a>
-            
-            <ul class="menu">
-                <button class="close-menu" aria-label="Cerrar menú">
-                    <img src="/img/close_icon.svg" alt="cerrar menú" />
-                </button>
-                <li><a href="#profile" class="selected">Perfil</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <button class="dark-mode-btn" aria-label="Activar modo oscuro">
-                <img src="/img/sun.svg" alt="Modo oscuro" width="29" 
-                height="29">
-            </button>
-            <button class="light-mode-btn" aria-label="Activar modo claro">
-                <img src="/img/moon.svg" alt="Modo claro" width="29" 
-                height="29">
-            </button>
-            <button class="open-menu" aria-label="Abrir menú">
-                <svg 
-                width="29" 
-                height="29" 
-                viewBox="0 0 29 29" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                     d="M2 14.5H27" 
-                     stroke="currentColor" 
-                     stroke-width="3" 
-                     stroke-linecap="round" 
-                     stroke-linejoin="round"
-                     />
-                    <path 
-                    d="M2 2H27" 
-                    stroke="currentColor" 
-                    stroke-width="3" stroke-linecap="round" 
-                    stroke-linejoin="round"
-                    />
-                    <path 
-                    d="M2 27H27" 
-                    stroke="currentColor" 
-                    stroke-width="3" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"/>
-                    </svg>
-            </button>
-        </nav>
+      <nav class="topnav">
+        <a href="#" class="logo">
+          <img
+            height="50"
+            width="50"
+            src="/img/imgPerfil.png"
+            alt="desarrollador"
+          />
+          <div>
+            Horus Chourio <br />
+            Desarrollador
+          </div>
+        </a>
+
+        <ul class="menu">
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="/img/close_icon.svg" alt="cerrar menú" />
+          </button>
+          <li><a href="#profile" class="selected">Perfil</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <button class="dark-mode-btn" aria-label="Activar modo oscuro">
+          <img src="/img/sun.svg" alt="Modo oscuro" width="29" height="29" />
+        </button>
+        <button class="light-mode-btn" aria-label="Activar modo claro">
+          <img src="/img/moon.svg" alt="Modo claro" width="29" height="29" />
+        </button>
+        <button class="open-menu" aria-label="Abrir menú">
+          <svg
+            width="29"
+            height="29"
+            viewBox="0 0 29 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 14.5H27"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 2H27"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 27H27"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </nav>
     </header>
 
     <div class="horizontal-padding vertical-padding">
-        <section class="profile" id="profile">
-            <div class="profile-info">
-                <h1 class="profile-title">Hola, soy <br />Horus Chourio</h1>
-                <p class="profile-details">
-                    Soy apasionado por la arquitectura y el desarrollo de software, el
-                    manejo de nuevas tecnologías y su aplicación para el avance
-                    tecnológico en beneficio de la sociedad.
-                </p>
-                <div class="profile-btns">
-                    <a class="profile-btn" href="#" download>Descargar cv</a>
-                    <a class="profile-btn" href="#">Certificaciones</a>
-                </div>
-            </div>
-            <span class="profile-img-section">
-                <img class="profile-img" src="/img/imgPerfil.png" alt="programador" />
-                <div class="profile-img-line"></div>
-            </span>
-        </section>        
+      <section class="profile" id="profile">
+        <div class="profile-info">
+          <h1 class="profile-title">Hola, soy <br />Horus Chourio</h1>
+          <p class="profile-details">
+            Soy apasionado por la arquitectura y el desarrollo de software, el
+            manejo de nuevas tecnologías y su aplicación para el avance
+            tecnológico en beneficio de la sociedad.
+          </p>
+          <div class="profile-btns">
+            <a class="profile-btn" href="/documents/cv-horus.pdf" download
+              >Descargar cv</a
+            >
+            <a
+              class="profile-btn"
+              href="https://drive.google.com/drive/folders/1B_i3-9AkO9uFSPU6eQlfSaJ8JUMo3Wl0"
+              >Certificaciones</a
+            >
+          </div>
+        </div>
+        <span class="profile-img-section">
+          <img class="profile-img" src="/img/imgPerfil.png" alt="programador" />
+          <div class="profile-img-line"></div>
+        </span>
+      </section>
     </div>
-    
+
     <section class="experiences" id="experience">
-        <svg 
+      <svg
         class="wave"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
-        viewBox="0 0 1440 320">
-            <path 
-            fill="currentColor" 
-            fill-opacity="1" 
-            d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-
-        </path>
-        </svg>
-        <div class="experiences-body">
-            <h2 class="experiences-title">Experiencia</h2>
-            <div class="experiences-grid">
-                <div class="empty"></div>
-                <div class="line"></div>
-                <div class="experience">
-                    <div class="experience-date">2022-2023</div>
-                    <div class="experience-company">Nombre de compañía</div>
-                    <div class="experience-position">Junior Developer</div>
-                    <div class="experience-description">El desarrollo de aplicaciones móviles es el conjunto de procesos y procedimientos involucrados en la escritura de software para dispositivos informáticos pequeños e inalámbricos, como teléfonos inteligentes y otros dispositivos portátiles.</div>
-                </div>
-                <div class="experience experience_left">
-                    <div class="experience-date">2022-2023</div>
-                    <div class="experience-company">Nombre de compañía</div>
-                    <div class="experience-position">Junior Developer</div>
-                    <div class="experience-description">El desarrollo de aplicaciones móviles es el conjunto de procesos y procedimientos involucrados en la escritura de software para dispositivos informáticos pequeños e inalámbricos, como teléfonos inteligentes y otros dispositivos portátiles.</div>
-                </div>
-                <div class="line"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="line"></div>
-                <div class="experience">
-                    <div class="experience-date">2022-2023</div>
-                    <div class="experience-company">Nombre de compañía</div>
-                    <div class="experience-position">Junior Developer</div>
-                    <div class="experience-description">El desarrollo de aplicaciones móviles es el conjunto de procesos y procedimientos involucrados en la escritura de software para dispositivos informáticos pequeños e inalámbricos, como teléfonos inteligentes y otros dispositivos portátiles.</div>
-                </div>
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="currentColor"
+          fill-opacity="1"
+          d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+      <div class="experiences-body">
+        <h2 class="experiences-title">Experiencia</h2>
+        <div class="experiences-grid">
+          <div class="empty"></div>
+          <div class="line"></div>
+          <div class="experience">
+            <div class="experience-date">2022-2023</div>
+            <div class="experience-company">Nombre de compañía</div>
+            <div class="experience-position">Junior Developer</div>
+            <div class="experience-description">
+              El desarrollo de aplicaciones móviles es el conjunto de procesos y
+              procedimientos involucrados en la escritura de software para
+              dispositivos informáticos pequeños e inalámbricos, como teléfonos
+              inteligentes y otros dispositivos portátiles.
             </div>
+          </div>
+          <div class="experience experience_left">
+            <div class="experience-date">2022-2023</div>
+            <div class="experience-company">Nombre de compañía</div>
+            <div class="experience-position">Junior Developer</div>
+            <div class="experience-description">
+              El desarrollo de aplicaciones móviles es el conjunto de procesos y
+              procedimientos involucrados en la escritura de software para
+              dispositivos informáticos pequeños e inalámbricos, como teléfonos
+              inteligentes y otros dispositivos portátiles.
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="line"></div>
+          <div class="experience">
+            <div class="experience-date">2022-2023</div>
+            <div class="experience-company">Nombre de compañía</div>
+            <div class="experience-position">Junior Developer</div>
+            <div class="experience-description">
+              El desarrollo de aplicaciones móviles es el conjunto de procesos y
+              procedimientos involucrados en la escritura de software para
+              dispositivos informáticos pequeños e inalámbricos, como teléfonos
+              inteligentes y otros dispositivos portátiles.
+            </div>
+          </div>
         </div>
-        <svg 
+      </div>
+      <svg
         class="wave wave_bottom"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none" 
-        viewBox="0 0 1440 320">
-            <path 
-            fill="currentColor" 
-            fill-opacity="1" 
-            d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-
-        </path>
-        </svg>
+        fill="none"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="currentColor"
+          fill-opacity="1"
+          d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
     <div class="horizontal-padding vertical-padding">
-        <section class="skills" id="skills">
-            <h2 class="skills-title">Habilidades</h2>
-            <ul class="skills-list">
-                <li class="skills-skill">HTML</li>
-                <li class="skills-skill">CSS</li>
-                <li class="skills-skill">Bootstrap</li>
-                <li class="skills-skill">GIT</li>
-                <li class="skills-skill">Scrum</li>
-                <li class="skills-skill">JavaScript</li>
-                <li class="skills-skill">VUE</li>
-                <li class="skills-skill">SQL</li>
-                <li class="skills-skill">Python</li>
-                <li class="skills-skill">Django</li>
-                <!-- <li class="skills-skill">Node.js</li> -->
-                <!-- <li class="skills-skill">React.js</li> -->
-                <!-- <li class="skills-skill">TypeScript</li> -->
-            </ul>
-        </section>
+      <section class="skills" id="skills">
+        <h2 class="skills-title">Habilidades</h2>
+        <ul class="skills-list">
+          <li class="skills-skill">HTML</li>
+          <li class="skills-skill">CSS</li>
+          <li class="skills-skill">Bootstrap</li>
+          <li class="skills-skill">GIT</li>
+          <li class="skills-skill">Scrum</li>
+          <li class="skills-skill">JavaScript</li>
+          <li class="skills-skill">VUE</li>
+          <li class="skills-skill">SQL</li>
+          <li class="skills-skill">Python</li>
+          <li class="skills-skill">Django</li>
+          <!-- <li class="skills-skill">Node.js</li> -->
+          <!-- <li class="skills-skill">React.js</li> -->
+          <!-- <li class="skills-skill">TypeScript</li> -->
+        </ul>
+      </section>
     </div>
 
     <div class="horizontal-padding vertical-padding">
-        <section class="contact" id="contact">
-            <h2 class="contact-title">Contacto</h2>
-            <div class="contact-details">
-                <div class="contact-details-group">
-                    <p class="conctact-label">Dirección:</p>
-                    <p class="contact-text">Almagro, Argentina</p>
-                </div>
-                <div class="contact-details-group">
-                    <p class="conctact-label">Email:</p>
-                    <p class="contact-text">horus0523@gmail.com</p>
-                </div>
-                <div class="contact-details-group">
-                    <p class="contact-text">Envié su mensaje y le responderé pronto</p>
-                </div>
-            </div>
-            <form class="contact-form" name="contact" netlify>
-                <div class="contact-form-group">
-                    <label for="name">Nombre</label>
-                    <input required type="text" name="name" id="name">
-                </div>
-                <div class="contact-form-group">
-                    <label for="email">Email</label>
-                    <input required type="email" name="name" id="email">
-                </div>
-                <div class="contact-form-group">
-                    <label for="messaje">Mensaje</label>
-                    <textarea required name="message" id="messaje" rows="6"></textarea>
-                </div>
-                <button type="submit" class="contact-form-submit">Enviar</button>
-            </form>
-            <nav class="social">
-                <ul class="social-list">
-                    <li class="social-item">
-                        <a href="link twitter" class="social-link">
-                            <img src="/img/social/twitter.svg" alt="twitter profile">
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="link github" class="social-link">
-                            <img src="/img/social/github.svg" alt="github profile">
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="link linkedin" class="social-link">
-                            <img src="/img/social/linkedin.svg" alt="linkedin profile">
-                        </a>
-                    </li>
-                    <li class="social-item">
+      <section class="contact" id="contact">
+        <h2 class="contact-title">Contacto</h2>
+        <div class="contact-details">
+          <div class="contact-details-group">
+            <p class="conctact-label">Dirección:</p>
+            <p class="contact-text">Almagro, Argentina</p>
+          </div>
+          <div class="contact-details-group">
+            <p class="conctact-label">Email:</p>
+            <p class="contact-text">horus0523@gmail.com</p>
+          </div>
+          <div class="contact-details-group">
+            <p class="contact-text">Envié su mensaje y le responderé pronto</p>
+          </div>
+        </div>
+        <form class="contact-form" name="contact" netlify>
+          <div class="contact-form-group">
+            <label for="name">Nombre</label>
+            <input required type="text" name="name" id="name" />
+          </div>
+          <div class="contact-form-group">
+            <label for="email">Email</label>
+            <input required type="email" name="name" id="email" />
+          </div>
+          <div class="contact-form-group">
+            <label for="messaje">Mensaje</label>
+            <textarea required name="message" id="messaje" rows="6"></textarea>
+          </div>
+          <button type="submit" class="contact-form-submit">Enviar</button>
+        </form>
+        <nav class="social">
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://twitter.com/horus0523" class="social-link">
+                <img src="/img/social/twitter.svg" alt="twitter profile" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://github.com/horus0523" class="social-link">
+                <img src="/img/social/github.svg" alt="github profile" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/horus-chourio"
+                class="social-link"
+              >
+                <img src="/img/social/linkedin.svg" alt="LinkedIn profile" />
+              </a>
+            </li>
+            <!-- <li class="social-item">
                         <a href="link youtube" class="social-link">
-                            <img src="/img/social/youtube.svg" alt="youtube profile">
+                            <img src="/img/social/youtube.svg" alt="YouTube profile">
                         </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+                    </li> -->
+          </ul>
+        </nav>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>

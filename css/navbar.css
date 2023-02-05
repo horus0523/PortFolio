@@ -16,13 +16,13 @@
   margin: 0 auto;
 }
 
-.dark-mode-btn, 
+.dark-mode-btn,
 .light-mode-btn {
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
-  
+
   display: flex;
   align-items: center;
 
@@ -30,11 +30,11 @@
   margin-right: 20px;
 }
 
-:root[data-theme="light"] .dark-mode-btn{
+:root[data-theme="light"] .dark-mode-btn {
   display: none;
 }
 
-:root[data-theme="dark"] .light-mode-btn{
+:root[data-theme="dark"] .light-mode-btn {
   display: none;
 }
 

@@ -5,11 +5,9 @@ lightModeBtn.addEventListener("click", setDarkMode);
 darkModeBtn.addEventListener("click", setLightMode);
 
 function setDarkMode() {
-    __setUserTheme("dark");
+  __setUserTheme("dark");
 }
 
 function setLightMode() {
-    __setUserTheme("light");
+  __setUserTheme("light");
 }
-
-

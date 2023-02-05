@@ -1,40 +1,40 @@
 .skills {
-    max-width: 980px;
-    margin: 0 auto;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .skills-title {
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .skills-skill {
-    font-size: 20px;
-    font-weight: 500;
-    box-shadow: var(--tag-shadow);
-    border-radius: 42px;
-    padding: 0.5em 0.7em;
-    margin: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: var(--tag-shadow);
+  border-radius: 42px;
+  padding: 0.5em 0.7em;
+  margin: 10px;
 }
 
 .skills-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (min-width: 950px) {
-    .skills-title {
-        font-size: 50px;
-    }
-    
-    .skills-skill {
-        font-size: 30px;
-        margin: 20px;
-    }
+  .skills-title {
+    font-size: 50px;
+  }
+
+  .skills-skill {
+    font-size: 30px;
+    margin: 20px;
+  }
 }
