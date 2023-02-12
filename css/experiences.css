@@ -58,6 +58,11 @@
 }
 
 @media (min-width: 950px) {
+
+  #experience {
+    scroll-margin-top: -300px;
+  }
+
   .experiences-title {
     font-size: 50px;
     margin: 35px 0;
