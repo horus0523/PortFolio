@@ -1,9 +1,9 @@
-.experiences {
+.courses {
   display: flex;
   flex-direction: column;
 }
 
-.experiences-body {
+.courses-body {
   background-color: var(--primary-color);
   color: var(--text-color-inverse);
 }
@@ -19,7 +19,7 @@
   transform: scaleY(-1);
   top: -2px;
 }
-.experiences-title {
+.courses-title {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,75 +27,75 @@
   margin: 25px;
 }
 
-.experience-date {
+.course-date {
   font-size: 25px;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-.experience-company {
+.course-company {
   font-size: 20px;
   text-transform: uppercase;
   margin-top: 5px;
 }
 
-.experience-position {
+.course-position {
   font-weight: 500;
   font-size: 18px;
   margin-top: 20px;
 }
 
-.experience-description {
+.course-description {
   font-weight: 400;
   font-size: 15px;
   margin-top: 10px;
 }
 
-.experience {
+.course {
   padding: 25px;
   max-width: 500px;
   margin: 0 auto;
 }
 
 @media (min-width: 950px) {
-  #experience {
+  #course {
     scroll-margin-top: -200px;
   }
 
-  .experiences-title {
+  .courses-title {
     font-size: 50px;
     margin: 35px 0;
   }
 
-  .experience-date {
+  .course-date {
     font-size: 40px;
   }
 
-  .experience-company {
+  .course-company {
     font-size: 25px;
   }
 
-  .experience-position {
+  .course-position {
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
   }
 
-  .experience-description {
+  .course-description {
     font-size: 20px;
     margin-top: 10px;
     line-height: 1.3;
   }
 
-  .experience {
+  .course {
     padding: 0px;
   }
 
-  .experience_left {
+  .course_left {
     text-align: right;
   }
 
-  .experiences-grid {
+  .courses-grid {
     display: grid;
     grid-template-columns: auto 2px auto;
     gap: 20px 70px;
